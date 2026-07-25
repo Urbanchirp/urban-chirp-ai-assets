@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Urban Chirp AI Content Engine - Research Results",
+  "description": "Structured SEO and competitive research output for the Urban Chirp AI Content Engine.",
+  "type": "object",
+  "properties": {
+    "primary_keyword": {
+      "type": "string"
+    },
+    "secondary_keywords": {
+      "type": "string"
+    },
+    "search_intent": {
+      "type": "string"
+    },
+    "search_demand_summary": {
+      "type": "string"
+    },
+    "people_also_ask": {
+      "type": "string"
+    },
+    "related_searches": {
+      "type": "string"
+    },
+    "competitor_urls": {
+      "type": "string"
+    },
+    "competitor_strengths": {
+      "type": "string"
+    },
+    "competitor_gaps": {
+      "type": "string"
+    },
+    "unique_content_angle": {
+      "type": "string"
+    },
+    "recommended_title": {
+      "type": "string"
+    },
+    "recommended_outline": {
+      "type": "string"
+    },
+    "opportunity_score": {
+      "type": "string"
+    },
+    "ai_recommendation": {
+      "type": "string"
+    },
+    "research_sources": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "primary_keyword",
+    "secondary_keywords",
+    "search_intent",
+    "search_demand_summary",
+    "people_also_ask",
+    "related_searches",
+    "competitor_urls",
+    "competitor_strengths",
+    "competitor_gaps",
+    "unique_content_angle",
+    "recommended_title",
+    "recommended_outline",
+    "opportunity_score",
+    "ai_recommendation",
+    "research_sources"
+  ],
+  "additionalProperties": false
+}
