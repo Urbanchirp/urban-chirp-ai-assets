@@ -1,0 +1,83 @@
+{
+  "type": "object",
+  "properties": {
+    "draft_version": {
+      "type": "string",
+      "description": "Draft version, beginning with Draft 1"
+    },
+    "content_type": {
+      "type": "string",
+      "description": "Content type, normally SEO Article"
+    },
+    "seo_title": {
+      "type": "string",
+      "description": "SEO-optimized title for the article"
+    },
+    "meta_description": {
+      "type": "string",
+      "description": "SEO meta description for the article"
+    },
+    "url_slug": {
+      "type": "string",
+      "description": "SEO-friendly URL slug using lowercase words separated by hyphens"
+    },
+    "primary_keyword": {
+      "type": "string",
+      "description": "Primary SEO keyword"
+    },
+    "secondary_keywords": {
+      "type": "string",
+      "description": "Secondary SEO keywords separated by semicolons"
+    },
+    "article_draft": {
+      "type": "string",
+      "description": "Complete publication-ready article draft with headings, paragraphs, lists, introduction and conclusion"
+    },
+    "faq_section": {
+      "type": "string",
+      "description": "Three to five relevant FAQ questions and answers"
+    },
+    "internal_link_suggestions": {
+      "type": "string",
+      "description": "Suggested internal pages or topics to link from the article"
+    },
+    "external_authority_links": {
+      "type": "string",
+      "description": "Credible external authority sources appropriate to the article"
+    },
+    "image_prompt": {
+      "type": "string",
+      "description": "Detailed editorial image-generation prompt appropriate for the article and brand"
+    },
+    "image_alt_text": {
+      "type": "string",
+      "description": "Accessible SEO-friendly alt text for the article image"
+    },
+    "cta": {
+      "type": "string",
+      "description": "Relevant call to action for The Black Jew Wealth Coach"
+    },
+    "quality_review": {
+      "type": "string",
+      "description": "Brief editorial quality review covering SEO, readability, brand alignment and factual caution"
+    }
+  },
+  "required": [
+    "draft_version",
+    "content_type",
+    "seo_title",
+    "meta_description",
+    "url_slug",
+    "primary_keyword",
+    "secondary_keywords",
+    "article_draft",
+    "faq_section",
+    "internal_link_suggestions",
+    "external_authority_links",
+    "image_prompt",
+    "image_alt_text",
+    "cta",
+    "quality_review"
+  ],
+  "additionalProperties": false
+}
