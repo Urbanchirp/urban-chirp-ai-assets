@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Urban Chirp AI Content Engine - Final Content Package",
+  "description": "Structured publication-ready editorial, SEO, linking, image direction, CTA, and quality-control output for the Urban Chirp AI Content Engine.",
+  "type": "object",
+  "properties": {
+    "article_title": {
+      "type": "string",
+      "description": "Publication-ready H1 article title."
+    },
+    "seo_title": {
+      "type": "string",
+      "description": "SEO title optimized for search relevance and click-through potential."
+    },
+    "meta_description": {
+      "type": "string",
+      "description": "Concise SEO meta description that accurately describes the article and naturally incorporates the primary keyword where appropriate."
+    },
+    "url_slug": {
+      "type": "string",
+      "description": "Short lowercase SEO-friendly URL slug using hyphens."
+    },
+    "primary_keyword": {
+      "type": "string",
+      "description": "Primary SEO keyword targeted by the article."
+    },
+    "secondary_keywords": {
+      "type": "string",
+      "description": "Relevant secondary SEO keywords separated by semicolons."
+    },
+    "article": {
+      "type": "string",
+      "description": "Complete publication-ready article in Markdown with logical H2 and H3 headings. The H1 article title should not be repeated inside this field."
+    },
+    "faq": {
+      "type": "string",
+      "description": "Useful FAQ questions and answers based on search intent, People Also Ask research, related searches, and article content."
+    },
+    "internal_links": {
+      "type": "string",
+      "description": "Recommended internal pages or content topics with suggested anchor text. Do not invent URLs when exact URLs were not supplied."
+    },
+    "external_links": {
+      "type": "string",
+      "description": "Relevant authoritative external resources supported by the supplied research. Include real URLs only when they are available in the research data."
+    },
+    "cta": {
+      "type": "string",
+      "description": "Brand-aligned call to action appropriate to the business goal without unsupported promises or guaranteed outcomes."
+    },
+    "image_prompt": {
+      "type": "string",
+      "description": "Detailed editorial photography prompt aligned with the article topic, audience, brand identity, and visual strategy."
+    },
+    "image_alt_text": {
+      "type": "string",
+      "description": "Concise, descriptive, accessibility-friendly alt text for the proposed article image."
+    },
+    "quality_review": {
+      "type": "string",
+      "description": "Internal editorial review summarizing factual accuracy, SEO, search intent, brand alignment, readability, unsupported-claim checks, and other quality-control findings."
+    },
+    "publication_status": {
+      "type": "string",
+      "enum": [
+        "Ready for Brandon Review",
+        "Needs Human Fact Check"
+      ],
+      "description": "Editorial workflow status. Ready for Brandon Review means the content passed the automated editorial review and is ready for human review, not publication approval. Needs Human Fact Check means material claims remain that require human verification."
+    }
+  },
+  "required": [
+    "article_title",
+    "seo_title",
+    "meta_description",
+    "url_slug",
+    "primary_keyword",
+    "secondary_keywords",
+    "article",
+    "faq",
+    "internal_links",
+    "external_links",
+    "cta",
+    "image_prompt",
+    "image_alt_text",
+    "quality_review",
+    "publication_status"
+  ],
+  "additionalProperties": false
+}
