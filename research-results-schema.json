@@ -1,53 +1,78 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Urban Chirp AI Content Engine - Research Results",
-  "description": "Structured SEO and competitive research output for the Urban Chirp AI Content Engine.",
+  "title": "The Black Jew Wealth Coach - Research Results",
+  "description": "Structured current-market SEO, search-intent, competitor, and content-opportunity research for The Black Jew Wealth Coach and Brandon Gardner.",
   "type": "object",
   "properties": {
     "primary_keyword": {
-      "type": "string"
+      "type": "string",
+      "description": "Primary SEO keyword selected or confirmed for the requested content topic."
     },
     "secondary_keywords": {
-      "type": "string"
+      "type": "string",
+      "description": "Relevant secondary keywords, long-tail terms, and semantic variations separated by semicolons."
     },
     "search_intent": {
-      "type": "string"
+      "type": "string",
+      "enum": [
+        "Informational",
+        "Commercial",
+        "Transactional",
+        "Navigational",
+        "Local",
+        "Mixed"
+      ],
+      "description": "Dominant search intent for the topic."
     },
     "search_demand_summary": {
-      "type": "string"
+      "type": "string",
+      "description": "Concise explanation of what searchers appear to want to learn, compare, solve, find, or accomplish based on current research."
     },
     "people_also_ask": {
-      "type": "string"
+      "type": "string",
+      "description": "Relevant search questions or common user questions separated by semicolons."
     },
     "related_searches": {
-      "type": "string"
+      "type": "string",
+      "description": "Relevant related searches, semantic variations, and long-tail topic opportunities separated by semicolons."
     },
     "competitor_urls": {
-      "type": "string"
+      "type": "string",
+      "description": "Specific competitor or competing content URLs actually identified during current research. Separate multiple URLs with semicolons."
     },
     "competitor_strengths": {
-      "type": "string"
+      "type": "string",
+      "description": "Evidence-based summary of what current competing content does well."
     },
     "competitor_gaps": {
-      "type": "string"
+      "type": "string",
+      "description": "Evidence-based summary of meaningful content gaps, weaknesses, or missed opportunities in current competing content."
     },
     "unique_content_angle": {
-      "type": "string"
+      "type": "string",
+      "description": "Recommended differentiated content angle for The Black Jew Wealth Coach based on audience needs, competitor gaps, search intent, and business goals."
     },
     "recommended_title": {
-      "type": "string"
+      "type": "string",
+      "description": "SEO-focused working title aligned with the primary keyword, current research, search intent, and brand positioning."
     },
     "recommended_outline": {
-      "type": "string"
+      "type": "string",
+      "description": "Substantive H2/H3 article outline capable of supporting a detailed publication-ready article."
     },
     "opportunity_score": {
-      "type": "string"
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100,
+      "description": "Editorial content-opportunity score from 1 to 100 based on brand relevance, audience usefulness, search intent, business fit, competitive gap, attainable SEO opportunity when known, conversion potential, and content differentiation."
     },
     "ai_recommendation": {
-      "type": "string"
+      "type": "string",
+      "description": "Strategic recommendation for how the later article-writing step should approach the topic, including emphasis, positioning, factual cautions, and conversion direction."
     },
     "research_sources": {
-      "type": "string"
+      "type": "string",
+      "description": "Specific authoritative URLs actually accessed during current research. Separate multiple URLs with semicolons. Do not invent URLs."
     }
   },
   "required": [
