@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Urban Chirp AI Content Engine - Article Revision",
+  "description": "Structured output for revising an existing article based on Brandon Gardner's revision comments while preserving SEO, brand alignment, and publication readiness.",
+  "type": "object",
+  "properties": {
+    "draft_version": {
+      "type": "string",
+      "description": "Revision label for the updated article, such as Revision 1, Revision 2, or a similar version identifier."
+    },
+    "article_title": {
+      "type": "string",
+      "description": "Final article title after applying Brandon Gardner's requested revisions."
+    },
+    "seo_title": {
+      "type": "string",
+      "description": "SEO-optimized title for the revised article."
+    },
+    "meta_description": {
+      "type": "string",
+      "description": "SEO meta description for the revised article."
+    },
+    "url_slug": {
+      "type": "string",
+      "description": "SEO-friendly URL slug using lowercase words separated by hyphens."
+    },
+    "primary_keyword": {
+      "type": "string",
+      "description": "Primary SEO keyword for the revised article."
+    },
+    "secondary_keywords": {
+      "type": "string",
+      "description": "Secondary SEO keywords separated by semicolons."
+    },
+    "complete_article": {
+      "type": "string",
+      "description": "Complete revised publication-ready article with all requested changes applied."
+    },
+    "faq_section": {
+      "type": "string",
+      "description": "Updated FAQ section containing relevant questions and answers."
+    },
+    "cta": {
+      "type": "string",
+      "description": "Updated call to action for The Black Jew Wealth Coach."
+    },
+    "internal_link_recommendations": {
+      "type": "string",
+      "description": "Suggested internal pages, articles, or topics to link from the revised article."
+    },
+    "external_authority_links": {
+      "type": "string",
+      "description": "Credible external authority sources appropriate to the revised article."
+    },
+    "image_prompt": {
+      "type": "string",
+      "description": "Editorial image-generation prompt appropriate for the revised article and brand."
+    },
+    "image_alt_text": {
+      "type": "string",
+      "description": "Accessible SEO-friendly alt text for the revised article image."
+    },
+    "revision_summary": {
+      "type": "string",
+      "description": "Brief summary explaining what was changed in response to Brandon Gardner's revision comments."
+    },
+    "next_workflow_status": {
+      "type": "string",
+      "enum": [
+        "Awaiting Brandon Review"
+      ],
+      "description": "Workflow status after a successful revision. Must return Awaiting Brandon Review."
+    }
+  },
+  "required": [
+    "draft_version",
+    "article_title",
+    "seo_title",
+    "meta_description",
+    "url_slug",
+    "primary_keyword",
+    "secondary_keywords",
+    "complete_article",
+    "faq_section",
+    "cta",
+    "internal_link_recommendations",
+    "external_authority_links",
+    "image_prompt",
+    "image_alt_text",
+    "revision_summary",
+    "next_workflow_status"
+  ],
+  "additionalProperties": false
+}
