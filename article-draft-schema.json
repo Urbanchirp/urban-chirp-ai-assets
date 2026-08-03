@@ -1,13 +1,42 @@
 {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "The Black Jew Wealth Coach - Article Draft",
+  "description": "Structured Draft 1 SEO article package for The Black Jew Wealth Coach and Brandon Gardner.",
   "type": "object",
   "properties": {
+    "request_id": {
+      "type": "string",
+      "pattern": "^BWC-[0-9]{8}-[0-9]{4}$",
+      "description": "The exact Request ID supplied by the research step in the format BWC-YYYYMMDD-HHMM."
+    },
     "draft_version": {
       "type": "string",
+      "const": "Draft 1",
       "description": "Draft version. For the initial article generation, return Draft 1."
     },
     "content_type": {
       "type": "string",
-      "description": "Content type for the completed draft, normally SEO Article."
+      "description": "Content type supplied by the research step, normally SEO Blog."
+    },
+    "topic_area": {
+      "type": "string",
+      "description": "Primary subject area supplied by the research step."
+    },
+    "target_audience": {
+      "type": "string",
+      "description": "Specific audience the article is written for."
+    },
+    "business_goal": {
+      "type": "string",
+      "description": "Primary business objective the article should support."
+    },
+    "related_service": {
+      "type": "string",
+      "description": "Relevant Brandon Gardner service supplied by the research step. Return an empty string when none applies."
+    },
+    "related_book": {
+      "type": "string",
+      "description": "Relevant Brandon Gardner book supplied by the research step. Return an empty string when none applies."
     },
     "seo_title": {
       "type": "string",
@@ -19,6 +48,7 @@
     },
     "url_slug": {
       "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
       "description": "Concise SEO-friendly URL slug based on the article topic and primary keyword, using lowercase words separated by hyphens."
     },
     "primary_keyword": {
@@ -63,8 +93,14 @@
     }
   },
   "required": [
+    "request_id",
     "draft_version",
     "content_type",
+    "topic_area",
+    "target_audience",
+    "business_goal",
+    "related_service",
+    "related_book",
     "seo_title",
     "meta_description",
     "url_slug",
