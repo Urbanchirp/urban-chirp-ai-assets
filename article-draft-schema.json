@@ -121,7 +121,7 @@
     "cta",
     "quality_review"
   ],
-  "additionalProperties": false
-}
+     "quality_review"
+  ],
   "additionalProperties": false
 }
