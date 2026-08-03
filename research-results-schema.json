@@ -1,13 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "The Black Jew Wealth Coach - Research Results",
-  "description": "Structured current-market SEO, search-intent, competitor, content-strategy, and content-opportunity research for The Black Jew Wealth Coach and Brandon Gardner.",
+  "description": "Structured current-market SEO, search-intent, competitor, Ubersuggest keyword, content-strategy, and content-opportunity research for The Black Jew Wealth Coach and Brandon Gardner.",
   "type": "object",
   "properties": {
     "request_id": {
       "type": "string",
       "pattern": "^BWC-[0-9]{8}-[0-9]{4}$",
-      "description": "Unique Request ID generated using the current date and 24-hour time in the format BWC-YYYYMMDD-HHMM. Example: BWC-20260803-0800."
+      "description": "Unique Request ID generated using the current date and 24-hour time in the format BWC-YYYYMMDD-HHMM."
     },
     "content_type": {
       "type": "string",
@@ -23,11 +23,11 @@
         "Press Release",
         "Other"
       ],
-      "description": "The selected content format. For the normal automated weekday article workflow, use SEO Blog."
+      "description": "Selected content format. For the normal weekday article workflow, use SEO Blog."
     },
     "topic_area": {
       "type": "string",
-      "description": "Primary subject area for the content, such as business funding, business credit, personal credit, financial coaching, wealth building, entrepreneurship, or real estate investing."
+      "description": "Primary subject area for the selected content opportunity."
     },
     "target_audience": {
       "type": "string",
@@ -35,11 +35,11 @@
     },
     "business_goal": {
       "type": "string",
-      "description": "Primary business objective for the content, such as generating qualified leads, building authority, educating prospects, supporting a service, or increasing organic visibility."
+      "description": "Primary business objective supported by the content."
     },
     "search_location": {
       "type": "string",
-      "description": "Geographic search market used for the research. Use United States unless a more specific supported location is appropriate."
+      "description": "Geographic search market used for the research. Use United States unless a more specific location is appropriate."
     },
     "research_priority": {
       "type": "string",
@@ -48,15 +48,47 @@
         "Medium",
         "Low"
       ],
-      "description": "Priority assigned to the opportunity based on relevance, timeliness, search intent, brand fit, and conversion potential."
+      "description": "Priority assigned to the content opportunity."
+    },
+    "ubersuggest_available": {
+      "type": "boolean",
+      "description": "True only when the connected Ubersuggest MCP tool successfully returned keyword data during this run."
+    },
+    "search_volume": {
+      "type": "string",
+      "description": "Actual monthly search volume returned by Ubersuggest for the primary keyword. Return an empty string when unavailable."
+    },
+    "seo_difficulty": {
+      "type": "string",
+      "description": "Actual SEO Difficulty returned by Ubersuggest for the primary keyword. Return an empty string when unavailable."
+    },
+    "paid_difficulty": {
+      "type": "string",
+      "description": "Actual Paid Difficulty returned by Ubersuggest for the primary keyword. Return an empty string when unavailable."
+    },
+    "cost_per_click": {
+      "type": "string",
+      "description": "Actual cost-per-click value returned by Ubersuggest for the primary keyword. Return an empty string when unavailable."
+    },
+    "keyword_trend": {
+      "type": "string",
+      "description": "Actual keyword trend or seasonality information returned by Ubersuggest. Return an empty string when unavailable."
+    },
+    "ubersuggest_related_keywords": {
+      "type": "string",
+      "description": "Related keyword opportunities returned by Ubersuggest, separated by semicolons. Return an empty string when unavailable."
+    },
+    "ubersuggest_competitor_gaps": {
+      "type": "string",
+      "description": "Competitor keyword gaps or opportunities identified through Ubersuggest. Return an empty string when unavailable."
     },
     "related_service": {
       "type": "string",
-      "description": "Most relevant known Brandon Gardner service connected to the topic. Return an empty string when no clear service applies."
+      "description": "Most relevant known Brandon Gardner service connected to the topic. Return an empty string when none clearly applies."
     },
     "related_book": {
       "type": "string",
-      "description": "Most relevant known Brandon Gardner book connected to the topic. Return an empty string when no clear book applies."
+      "description": "Most relevant known Brandon Gardner book connected to the topic. Return an empty string when none clearly applies."
     },
     "cta": {
       "type": "string",
@@ -68,7 +100,7 @@
     },
     "primary_keyword": {
       "type": "string",
-      "description": "Primary SEO keyword selected or confirmed for the requested content topic."
+      "description": "Primary SEO keyword selected or confirmed for the content opportunity."
     },
     "secondary_keywords": {
       "type": "string",
@@ -84,23 +116,23 @@
         "Local",
         "Mixed"
       ],
-      "description": "Dominant search intent for the topic."
+      "description": "Dominant search intent for the selected topic."
     },
     "search_demand_summary": {
       "type": "string",
-      "description": "Concise explanation of what searchers appear to want to learn, compare, solve, find, or accomplish based on current research."
+      "description": "Concise explanation of what searchers want to learn, compare, solve, find, or accomplish."
     },
     "people_also_ask": {
       "type": "string",
-      "description": "Relevant search questions or common user questions separated by semicolons."
+      "description": "Relevant search questions separated by semicolons."
     },
     "related_searches": {
       "type": "string",
-      "description": "Relevant related searches, semantic variations, and long-tail topic opportunities separated by semicolons."
+      "description": "Relevant related searches and long-tail opportunities separated by semicolons."
     },
     "competitor_urls": {
       "type": "string",
-      "description": "Specific competitor or competing content URLs actually identified during current research. Separate multiple URLs with semicolons."
+      "description": "Specific competing-content URLs actually identified during current research, separated by semicolons."
     },
     "competitor_strengths": {
       "type": "string",
@@ -108,11 +140,11 @@
     },
     "competitor_gaps": {
       "type": "string",
-      "description": "Evidence-based summary of meaningful content gaps, weaknesses, or missed opportunities in current competing content."
+      "description": "Evidence-based summary of meaningful gaps, weaknesses, or missed opportunities in competing content."
     },
     "unique_content_angle": {
       "type": "string",
-      "description": "Recommended differentiated content angle for The Black Jew Wealth Coach based on audience needs, competitor gaps, search intent, and business goals."
+      "description": "Recommended differentiated content angle based on audience needs, competitor gaps, search intent, and business goals."
     },
     "recommended_title": {
       "type": "string",
@@ -120,21 +152,21 @@
     },
     "recommended_outline": {
       "type": "string",
-      "description": "Substantive H2/H3 article outline capable of supporting a detailed publication-ready article."
+      "description": "Substantive H2 and H3 article outline capable of supporting a detailed publication-ready article."
     },
     "opportunity_score": {
       "type": "integer",
       "minimum": 1,
       "maximum": 100,
-      "description": "Editorial content-opportunity score from 1 to 100 based on brand relevance, audience usefulness, search intent, business fit, competitive gap, attainable SEO opportunity when known, conversion potential, and content differentiation."
+      "description": "Content-opportunity score based on brand relevance, usefulness, search intent, business fit, competitive gap, SEO opportunity, conversion potential, and differentiation."
     },
     "ai_recommendation": {
       "type": "string",
-      "description": "Strategic recommendation for how the article-writing step should approach the topic, including emphasis, positioning, factual cautions, and conversion direction."
+      "description": "Strategic recommendation for the later article-writing step."
     },
     "research_sources": {
       "type": "string",
-      "description": "Specific authoritative URLs actually accessed during current research. Separate multiple URLs with semicolons. Do not invent URLs."
+      "description": "Specific authoritative URLs actually accessed during current research, separated by semicolons. Do not invent URLs."
     }
   },
   "required": [
@@ -145,6 +177,14 @@
     "business_goal",
     "search_location",
     "research_priority",
+    "ubersuggest_available",
+    "search_volume",
+    "seo_difficulty",
+    "paid_difficulty",
+    "cost_per_click",
+    "keyword_trend",
+    "ubersuggest_related_keywords",
+    "ubersuggest_competitor_gaps",
     "related_service",
     "related_book",
     "cta",
