@@ -1,12 +1,70 @@
-{
+{{
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "The Black Jew Wealth Coach - Research Results",
-  "description": "Structured current-market SEO, search-intent, competitor, and content-opportunity research for The Black Jew Wealth Coach and Brandon Gardner.",
+  "description": "Structured current-market SEO, search-intent, competitor, content-strategy, and content-opportunity research for The Black Jew Wealth Coach and Brandon Gardner.",
   "type": "object",
   "properties": {
     "request_id": {
       "type": "string",
-      "description": "Generate a unique Request ID using the current date and 24-hour time in the format BWC-YYYYMMDD-HHMM. Example: BWC-20260803-0800."
+      "pattern": "^BWC-[0-9]{8}-[0-9]{4}$",
+      "description": "Unique Request ID generated using the current date and 24-hour time in the format BWC-YYYYMMDD-HHMM. Example: BWC-20260803-0800."
+    },
+    "content_type": {
+      "type": "string",
+      "enum": [
+        "SEO Blog",
+        "GBP Post",
+        "Social Campaign",
+        "Email Campaign",
+        "Landing Page",
+        "Video Script",
+        "FAQ",
+        "Case Study",
+        "Press Release",
+        "Other"
+      ],
+      "description": "The selected content format. For the normal automated weekday article workflow, use SEO Blog."
+    },
+    "topic_area": {
+      "type": "string",
+      "description": "Primary subject area for the content, such as business funding, business credit, personal credit, financial coaching, wealth building, entrepreneurship, or real estate investing."
+    },
+    "target_audience": {
+      "type": "string",
+      "description": "Specific audience most likely to benefit from the selected topic."
+    },
+    "business_goal": {
+      "type": "string",
+      "description": "Primary business objective for the content, such as generating qualified leads, building authority, educating prospects, supporting a service, or increasing organic visibility."
+    },
+    "search_location": {
+      "type": "string",
+      "description": "Geographic search market used for the research. Use United States unless a more specific supported location is appropriate."
+    },
+    "research_priority": {
+      "type": "string",
+      "enum": [
+        "High",
+        "Medium",
+        "Low"
+      ],
+      "description": "Priority assigned to the opportunity based on relevance, timeliness, search intent, brand fit, and conversion potential."
+    },
+    "related_service": {
+      "type": "string",
+      "description": "Most relevant known Brandon Gardner service connected to the topic. Return an empty string when no clear service applies."
+    },
+    "related_book": {
+      "type": "string",
+      "description": "Most relevant known Brandon Gardner book connected to the topic. Return an empty string when no clear book applies."
+    },
+    "cta": {
+      "type": "string",
+      "description": "Recommended call to action aligned with the selected topic and business goal."
+    },
+    "special_instructions": {
+      "type": "string",
+      "description": "Topic-specific writing cautions, compliance notes, emphasis, or editorial instructions for the article-writing stage."
     },
     "primary_keyword": {
       "type": "string",
@@ -72,7 +130,7 @@
     },
     "ai_recommendation": {
       "type": "string",
-      "description": "Strategic recommendation for how the later article-writing step should approach the topic, including emphasis, positioning, factual cautions, and conversion direction."
+      "description": "Strategic recommendation for how the article-writing step should approach the topic, including emphasis, positioning, factual cautions, and conversion direction."
     },
     "research_sources": {
       "type": "string",
@@ -81,6 +139,16 @@
   },
   "required": [
     "request_id",
+    "content_type",
+    "topic_area",
+    "target_audience",
+    "business_goal",
+    "search_location",
+    "research_priority",
+    "related_service",
+    "related_book",
+    "cta",
+    "special_instructions",
     "primary_keyword",
     "secondary_keywords",
     "search_intent",
