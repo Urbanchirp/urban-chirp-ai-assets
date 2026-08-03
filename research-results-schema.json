@@ -4,6 +4,10 @@
   "description": "Structured current-market SEO, search-intent, competitor, and content-opportunity research for The Black Jew Wealth Coach and Brandon Gardner.",
   "type": "object",
   "properties": {
+    "request_id": {
+      "type": "string",
+      "description": "Generate a unique Request ID using the current date and 24-hour time in the format BWC-YYYYMMDD-HHMM. Example: BWC-20260803-0800."
+    },
     "primary_keyword": {
       "type": "string",
       "description": "Primary SEO keyword selected or confirmed for the requested content topic."
@@ -76,6 +80,7 @@
     }
   },
   "required": [
+    "request_id",
     "primary_keyword",
     "secondary_keywords",
     "search_intent",
