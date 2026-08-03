@@ -70,6 +70,10 @@
       "type": "string",
       "description": "Actual cost-per-click value returned by Ubersuggest for the primary keyword. Return an empty string when unavailable."
     },
+    "keyword_intent": {
+  "type": "string",
+  "description": "Search intent classification returned by Ubersuggest when available. Return an empty string if unavailable."
+    },
     "keyword_trend": {
       "type": "string",
       "description": "Actual keyword trend or seasonality information returned by Ubersuggest. Return an empty string when unavailable."
