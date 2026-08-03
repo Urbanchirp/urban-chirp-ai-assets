@@ -64,6 +64,133 @@
     "minLength": 7000,
     "description": "Complete Draft 1 SEO article containing at least 1000 words of substantive article body content, normally targeting 1100 to 1400 words. Metadata, FAQs, CTA, quality review, and other schema fields do not count toward this requirement. Write a fully developed publication-ready article in clean Markdown with a strong introduction, detailed H2 sections, useful H3 subsections where appropriate, practical explanations, actionable guidance, supported cautions, and a conclusion. Each major section should contain developed paragraphs rather than brief summaries. Use the supplied search intent, Ubersuggest data, search-demand findings, People Also Ask questions, related searches, competitor gaps, unique content angle, recommended outline, and AI recommendation. Do not return an outline, synopsis, abbreviated article, or short overview. Do not create real-life success stories, case studies, expert claims, statistics, or factual examples unless they are supported by the supplied research. Clearly label illustrative examples as hypothetical. Do not include the final CTA inside article_draft because it is returned separately."
     },
+    {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "The Black Jew Wealth Coach - Article Draft",
+  "description": "Structured Draft 1 SEO article package for The Black Jew Wealth Coach and Brandon Gardner.",
+  "type": "object",
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "pattern": "^BWC-[0-9]{8}-[0-9]{4}$",
+      "description": "The exact Request ID supplied by the research step in the format BWC-YYYYMMDD-HHMM."
+    },
+    "draft_version": {
+      "type": "string",
+      "const": "Draft 1",
+      "description": "Draft version. For the initial article generation, return Draft 1."
+    },
+    "content_type": {
+      "type": "string",
+      "description": "Content type supplied by the research step, normally SEO Blog."
+    },
+    "topic_area": {
+      "type": "string",
+      "description": "Primary subject area supplied by the research step."
+    },
+    "target_audience": {
+      "type": "string",
+      "description": "Specific audience the article is written for."
+    },
+    "business_goal": {
+      "type": "string",
+      "description": "Primary business objective the article should support."
+    },
+    "related_service": {
+      "type": "string",
+      "description": "Relevant Brandon Gardner service supplied by the research step. Return an empty string when none applies."
+    },
+    "related_book": {
+      "type": "string",
+      "description": "Relevant Brandon Gardner book supplied by the research step. Return an empty string when none applies."
+    },
+    "seo_title": {
+      "type": "string",
+      "description": "Compelling SEO-optimized title for The Black Jew Wealth Coach based on the article topic, primary keyword, search intent, and supplied research. Avoid clickbait and unsupported promises."
+    },
+    "meta_description": {
+      "type": "string",
+      "description": "Concise SEO meta description accurately summarizing the article and encouraging an appropriate search click. Use the primary keyword naturally when appropriate."
+    },
+    "url_slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "description": "Concise SEO-friendly URL slug based on the article topic and primary keyword, using lowercase words separated by hyphens."
+    },
+    "primary_keyword": {
+      "type": "string",
+      "description": "Primary SEO keyword selected from the supplied research and used naturally throughout the article."
+    },
+    "secondary_keywords": {
+      "type": "string",
+      "description": "Relevant supporting SEO keywords and semantic variations separated by semicolons. Do not keyword stuff."
+    },
+    "article_draft": {
+    "type": "string",
+    "minLength": 7000,
+    "description": "Complete Draft 1 SEO article containing at least 1000 words of substantive article body content, normally targeting 1100 to 1400 words. Metadata, FAQs, CTA, quality review, and other schema fields do not count toward this requirement. Write a fully developed publication-ready article in clean Markdown with a strong introduction, detailed H2 sections, useful H3 subsections where appropriate, practical explanations, actionable guidance, supported cautions, and a conclusion. Each major section should contain developed paragraphs rather than brief summaries. Use the supplied search intent, Ubersuggest data, search-demand findings, People Also Ask questions, related searches, competitor gaps, unique content angle, recommended outline, and AI recommendation. Do not return an outline, synopsis, abbreviated article, or short overview. Do not create real-life success stories, case studies, expert claims, statistics, or factual examples unless they are supported by the supplied research. Clearly label illustrative examples as hypothetical. Do not include the final CTA inside article_draft because it is returned separately."
+    },
+    "article_word_count": {
+      "type": "integer",
+      "minimum": 1000,
+      "description": "Approximate word count of article_draft only. Do not include FAQs, metadata, CTA, quality review, or other fields."
+    },
+    "faq_section": {
+      "type": "string",
+      "description": "Three to five relevant questions and substantive answers informed by search intent, People Also Ask, related searches, and the article topic. Do not repeat answers already stated verbatim in the article and do not invent factual claims."
+    },
+    "internal_link_suggestions": {
+      "type": "string",
+      "description": "Relevant internal content or service-page opportunities for The Black Jew Wealth Coach. Provide page or article topics separated clearly. Do not invent live URLs, use placeholder links such as #, or assume URLs that were not supplied."
+    },
+    "external_authority_links": {
+      "type": "string",
+      "description": "Relevant credible external authority resources supported by the supplied research. Prefer specific relevant resources from government agencies, recognized institutions, established financial organizations, educational institutions, or reputable publications when available. Never fabricate URLs. If an exact verified destination URL is unavailable, provide the organization or resource name rather than inventing a link."
+    },
+    "image_prompt": {
+      "type": "string",
+      "description": "Create one detailed article-specific premium editorial photography prompt for The Black Jew Wealth Coach. The visual should communicate the specific article topic while reflecting Brandon Gardner's audience and brand themes such as Black entrepreneurship, financial education, ownership, investing, business growth, wealth building, or generational wealth when relevant. Prioritize authentic Black entrepreneurs, professionals, investors, business owners, families, or young people when appropriate to the article, while allowing natural diversity when context calls for it. Specify the subject, activity, environment, composition, wardrobe when applicable, lighting, mood, camera perspective, photographic style, and topic-specific visual details. Use authentic people, realistic activity, sophisticated contemporary environments, natural expressions, realistic skin tones, editorial lighting, visual depth, and a premium financial or entrepreneurial editorial aesthetic. Vary subjects, ages, genders, professions, settings, activities, and compositions across articles. Do not default to the same entrepreneur sitting at a laptop. Avoid generic stock-photo scenes, fake corporate handshakes, fake wealth imagery, piles of cash, raining money, oversized dollar signs, luxury cars or mansions unrelated to the topic, cartoon finance imagery, stereotypes, religious costumes or stereotypes, fake checks, unrealistic financial promises, logos, watermarks, headlines, or text embedded in the image."
+    },
+    "image_alt_text": {
+      "type": "string",
+      "description": "Concise, accessible alt text accurately describing the proposed featured image. Describe what is visually present and relevant to the article. Do not keyword stuff."
+    },
+    "cta": {
+      "type": "string",
+      "description": "Relevant, credible call to action connecting the reader with The Black Jew Wealth Coach, Brandon Gardner, or an appropriate supplied service or resource. The CTA should fit the article naturally and must not guarantee funding, credit improvement, investment returns, wealth, or other financial outcomes."
+    },
+    "quality_review": {
+      "type": "string",
+      "description": "Brief editorial quality assessment of the generated draft covering search intent, article depth, SEO structure, readability, keyword use, brand alignment, factual caution, unsupported claims, financial-content safeguards, CTA relevance, image-brand alignment, and overall readiness for Brandon Gardner to review. Identify anything Brandon should verify before publication. Do not mark the article as finally approved."
+    }
+  },
+  "required": [
+    "request_id",
+    "draft_version",
+    "content_type",
+    "topic_area",
+    "target_audience",
+    "business_goal",
+    "related_service",
+    "related_book",
+    "seo_title",
+    "meta_description",
+    "url_slug",
+    "primary_keyword",
+    "secondary_keywords",
+    "article_draft",
+    "article_word_count"
+    "faq_section",
+    "internal_link_suggestions",
+    "external_authority_links",
+    "image_prompt",
+    "image_alt_text",
+    "cta",
+    "quality_review"
+  ],
+  "additionalProperties": false
+}
+
     "faq_section": {
       "type": "string",
       "description": "Three to five relevant questions and substantive answers informed by search intent, People Also Ask, related searches, and the article topic. Do not repeat answers already stated verbatim in the article and do not invent factual claims."
