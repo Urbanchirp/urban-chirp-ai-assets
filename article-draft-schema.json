@@ -97,7 +97,7 @@
       "description": "Brief editorial quality assessment covering search intent, article depth, SEO structure, readability, keyword use, brand alignment, factual caution, unsupported claims, financial-content safeguards, CTA relevance, image-brand alignment, and readiness for Brandon Gardner to review. Identify anything Brandon should verify before publication. Do not mark the article as finally approved."
     }
   },
-  "required": [
+    "required": [
     "request_id",
     "draft_version",
     "content_type",
@@ -120,8 +120,6 @@
     "image_alt_text",
     "cta",
     "quality_review"
-  ],
-     "quality_review"
   ],
   "additionalProperties": false
 }
