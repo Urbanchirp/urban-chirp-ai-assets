@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Urban Chirp AI Content Engine - Approval Email Response",
+  "description": "Structured output for extracting Brandon Gardner's article decision, request ID, and review comments from an email reply.",
+  "type": "object",
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "description": "The exact dynamic Request ID found in the email subject or quoted email body, such as BWC-20260806-0930."
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "APPROVE",
+        "REQUEST REVISION",
+        "REJECT",
+        "UNCLEAR"
+      ],
+      "description": "Brandon Gardner's normalized editorial decision."
+    },
+    "comments": {
+      "type": "string",
+      "description": "Brandon Gardner's revision or rejection comments. Return an empty string when there are no comments."
+    }
+  },
+  "required": [
+    "request_id",
+    "decision",
+    "comments"
+  ],
+  "additionalProperties": false
+}
