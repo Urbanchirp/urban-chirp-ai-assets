@@ -1,0 +1,214 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Zelda's Hair Clinic - Research Results",
+  "description": "Structured current-market SEO, search-intent, competitor, Ubersuggest keyword, content-strategy, and content-opportunity research for Zelda's Hair Clinic. The research package is designed to support accurate, useful, search-focused Draft 1 content covering appropriate hair loss, scalp health, trichology, hair restoration, hair replacement, natural hair care, salon, functional nutrition, and wellness topics when relevant to the clinic's known services. Health-related research must remain evidence-aware, avoid unsupported medical claims, and clearly distinguish educational information from diagnosis or treatment.",
+  "type": "object",
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "pattern": "^ZHC-[0-9]{8}-[0-9]{4}$",
+      "description": "Unique Request ID generated using the current date and 24-hour time in the format ZHC-YYYYMMDD-HHMM."
+    },
+    "content_type": {
+      "type": "string",
+      "enum": [
+        "SEO Blog",
+        "GBP Post",
+        "Social Campaign",
+        "Email Campaign",
+        "Landing Page",
+        "Video Script",
+        "FAQ",
+        "Case Study",
+        "Press Release",
+        "Other"
+      ],
+      "description": "Selected content format. For the normal scheduled article workflow, use SEO Blog."
+    },
+    "topic_area": {
+      "type": "string",
+      "description": "Primary subject area for the selected Zelda's Hair Clinic content opportunity."
+    },
+    "target_audience": {
+      "type": "string",
+      "description": "Specific audience most likely to benefit from the selected topic."
+    },
+    "business_goal": {
+      "type": "string",
+      "description": "Primary business objective supported by the content, such as organic search visibility, education, lead generation, consultation interest, service awareness, or brand authority."
+    },
+    "search_location": {
+      "type": "string",
+      "description": "Geographic search market used for the research. Use United States unless a more specific location is appropriate to the content opportunity."
+    },
+    "research_priority": {
+      "type": "string",
+      "enum": [
+        "High",
+        "Medium",
+        "Low"
+      ],
+      "description": "Priority assigned to the content opportunity."
+    },
+    "ubersuggest_available": {
+      "type": "boolean",
+      "description": "True only when the connected Ubersuggest MCP tool successfully returned keyword data during this run."
+    },
+    "search_volume": {
+      "type": "string",
+      "description": "Actual monthly search volume returned by Ubersuggest for the primary keyword. Never estimate or infer this value. Return an empty string when unavailable."
+    },
+    "seo_difficulty": {
+      "type": "string",
+      "description": "Actual SEO Difficulty returned by Ubersuggest for the primary keyword. Never estimate or infer this value. Return an empty string when unavailable."
+    },
+    "paid_difficulty": {
+      "type": "string",
+      "description": "Actual Paid Difficulty returned by Ubersuggest for the primary keyword. Never estimate or infer this value. Return an empty string when unavailable."
+    },
+    "cost_per_click": {
+      "type": "string",
+      "description": "Actual cost-per-click value returned by Ubersuggest for the primary keyword. Never estimate or infer this value. Return an empty string when unavailable."
+    },
+    "keyword_intent": {
+      "type": "string",
+      "description": "Search intent classification returned directly by Ubersuggest when available. Return an empty string when unavailable."
+    },
+    "keyword_trend": {
+      "type": "string",
+      "description": "Actual keyword trend or seasonality information returned by Ubersuggest. Never estimate or infer this value. Return an empty string when unavailable."
+    },
+    "ubersuggest_related_keywords": {
+      "type": "string",
+      "description": "Related keyword opportunities returned by Ubersuggest, separated by semicolons. Return an empty string when unavailable."
+    },
+    "ubersuggest_competitor_gaps": {
+      "type": "string",
+      "description": "Competitor keyword gaps or opportunities identified through Ubersuggest. Return an empty string when unavailable."
+    },
+    "related_service": {
+      "type": "string",
+      "description": "Most relevant known Zelda's Hair Clinic service connected to the topic. Use only services supported by supplied business information or reliable research context. Do not invent a service name. Return an empty string when none clearly applies."
+    },
+    "related_book": {
+      "type": "string",
+      "description": "Reserved reusable Urban Chirp Content Engine field. For Zelda's Hair Clinic, return an empty string."
+    },
+    "cta": {
+      "type": "string",
+      "description": "Recommended call to action aligned with the selected topic and business goal. The CTA may encourage learning more about a relevant Zelda's Hair Clinic service or scheduling an appropriate consultation, but must not guarantee hair growth, restoration, diagnosis, treatment success, or health outcomes."
+    },
+    "special_instructions": {
+      "type": "string",
+      "description": "Topic-specific writing cautions, health-content safeguards, compliance considerations, required distinctions, emphasis, or editorial instructions for the later article-writing stage."
+    },
+    "primary_keyword": {
+      "type": "string",
+      "description": "Primary SEO keyword selected or confirmed for the content opportunity using current research and, when available, Ubersuggest data."
+    },
+    "secondary_keywords": {
+      "type": "string",
+      "description": "Relevant secondary keywords, long-tail terms, and semantic variations separated by semicolons."
+    },
+    "search_intent": {
+      "type": "string",
+      "enum": [
+        "Informational",
+        "Commercial",
+        "Transactional",
+        "Navigational",
+        "Local",
+        "Mixed"
+      ],
+      "description": "Dominant search intent for the selected topic based on current search research."
+    },
+    "search_demand_summary": {
+      "type": "string",
+      "description": "Concise explanation of what searchers want to learn, compare, solve, find, understand, or accomplish regarding the selected hair, scalp, trichology, hair-loss, restoration, salon, nutrition, or wellness topic."
+    },
+    "people_also_ask": {
+      "type": "string",
+      "description": "Relevant current search questions separated by semicolons. Do not invent questions and present them as observed search data when they were not actually identified."
+    },
+    "related_searches": {
+      "type": "string",
+      "description": "Relevant related searches and long-tail opportunities separated by semicolons."
+    },
+    "competitor_urls": {
+      "type": "string",
+      "description": "Specific competing-content URLs actually identified during current research, separated by semicolons. Never fabricate URLs."
+    },
+    "competitor_strengths": {
+      "type": "string",
+      "description": "Evidence-based summary of what current competing content does well, including useful coverage, organization, authority, search alignment, practical value, or other meaningful strengths."
+    },
+    "competitor_gaps": {
+      "type": "string",
+      "description": "Evidence-based summary of meaningful gaps, weaknesses, unanswered questions, outdated information, insufficient depth, unclear explanations, or other opportunities found in competing content."
+    },
+    "unique_content_angle": {
+      "type": "string",
+      "description": "Recommended differentiated content angle for Zelda's Hair Clinic based on audience needs, competitor gaps, search intent, current search demand, business goals, and the clinic's supported areas of expertise."
+    },
+    "recommended_title": {
+      "type": "string",
+      "description": "SEO-focused working title aligned with the primary keyword, current research, search intent, Zelda's Hair Clinic positioning, and factual-health-content safeguards. Avoid clickbait, diagnosis language, or unsupported promises."
+    },
+    "recommended_outline": {
+      "type": "string",
+      "description": "Substantive H2 and H3 article outline capable of supporting a useful Draft 1 article of at least 600 words. The outline should answer search intent thoroughly without padding, repetition, unsupported medical claims, or invented information."
+    },
+    "opportunity_score": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100,
+      "description": "Content-opportunity score based on Zelda's Hair Clinic relevance, audience usefulness, search intent, business fit, competitive gap, SEO opportunity, conversion potential, differentiation, and ability to support accurate educational content."
+    },
+    "ai_recommendation": {
+      "type": "string",
+      "description": "Strategic recommendation for the later article-writing step, including the most useful direction, content emphasis, important search questions, differentiation opportunities, and any factual or health-related cautions."
+    },
+    "research_sources": {
+      "type": "string",
+      "description": "Specific authoritative URLs actually accessed during current research, separated by semicolons. Favor government health agencies, recognized medical or professional organizations, universities, peer-reviewed resources, and other credible primary or authoritative sources when health-related claims are involved. Never invent URLs."
+    }
+  },
+  "required": [
+    "request_id",
+    "content_type",
+    "topic_area",
+    "target_audience",
+    "business_goal",
+    "search_location",
+    "research_priority",
+    "ubersuggest_available",
+    "search_volume",
+    "seo_difficulty",
+    "paid_difficulty",
+    "cost_per_click",
+    "keyword_intent",
+    "keyword_trend",
+    "ubersuggest_related_keywords",
+    "ubersuggest_competitor_gaps",
+    "related_service",
+    "related_book",
+    "cta",
+    "special_instructions",
+    "primary_keyword",
+    "secondary_keywords",
+    "search_intent",
+    "search_demand_summary",
+    "people_also_ask",
+    "related_searches",
+    "competitor_urls",
+    "competitor_strengths",
+    "competitor_gaps",
+    "unique_content_angle",
+    "recommended_title",
+    "recommended_outline",
+    "opportunity_score",
+    "ai_recommendation",
+    "research_sources"
+  ],
+  "additionalProperties": false
+}

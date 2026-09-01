@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Zelda's Hair Clinic - Article Draft",
+  "description": "Structured Draft 1 SEO article package for Zelda's Hair Clinic. This schema governs article generation after the research stage of the Urban Chirp AI Content Engine. It preserves the research Request ID and content strategy while generating SEO metadata, a substantive article body, FAQs, internal-link opportunities, authoritative external resources, featured-image direction, accessible alt text, a CTA, and an editorial quality review. Draft 1 must contain at least 600 words of substantive article body content and is designed for later automated editorial review and expansion when needed. Hair, scalp, trichology, nutrition, wellness, and other health-related content must remain educational, cautious, evidence-aware, and grounded in the supplied research. The article must not diagnose medical conditions, fabricate sources or claims, promise treatment outcomes, guarantee hair growth or restoration, or invent services, credentials, products, studies, statistics, testimonials, or results. The output is an unapproved Draft 1 intended for Zelda's review before publication.",
+  "type": "object",
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "pattern": "^ZHC-[0-9]{8}-[0-9]{4}$",
+      "description": "The exact Request ID supplied by the research step in the format ZHC-YYYYMMDD-HHMM."
+    },
+    "draft_version": {
+      "type": "string",
+      "const": "Draft 1",
+      "description": "Draft version. For the initial article generation, return Draft 1."
+    },
+    "content_type": {
+      "type": "string",
+      "description": "Content type supplied by the research step, normally SEO Blog."
+    },
+    "topic_area": {
+      "type": "string",
+      "description": "Primary subject area supplied by the research step."
+    },
+    "target_audience": {
+      "type": "string",
+      "description": "Specific audience the article is written for."
+    },
+    "business_goal": {
+      "type": "string",
+      "description": "Primary business objective the article should support."
+    },
+    "related_service": {
+      "type": "string",
+      "description": "Relevant Zelda's Hair Clinic service supplied by the research step. Use only a service supported by the supplied research or approved business information. Do not invent or rename a service. Return an empty string when none clearly applies."
+    },
+    "related_book": {
+      "type": "string",
+      "description": "Reserved reusable Urban Chirp AI Content Engine field. Return an empty string for Zelda's Hair Clinic."
+    },
+    "seo_title": {
+      "type": "string",
+      "description": "Compelling SEO-optimized title based on the article topic, primary keyword, search intent, and supplied research. Avoid clickbait, diagnosis language, guaranteed outcomes, and unsupported promises."
+    },
+    "meta_description": {
+      "type": "string",
+      "description": "Concise SEO meta description accurately summarizing the article and encouraging an appropriate search click. Use the primary keyword naturally when appropriate. Do not make unsupported medical, treatment, hair-growth, restoration, or wellness claims."
+    },
+    "url_slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "description": "Concise SEO-friendly URL slug using lowercase words separated by hyphens."
+    },
+    "primary_keyword": {
+      "type": "string",
+      "description": "Primary SEO keyword selected from the supplied research and used naturally throughout the article."
+    },
+    "secondary_keywords": {
+      "type": "string",
+      "description": "Relevant supporting SEO keywords and semantic variations separated by semicolons. Do not keyword stuff."
+    },
+    "article_draft": {
+      "type": "string",
+      "description": "Complete, substantive Draft 1 SEO article for Zelda's Hair Clinic. Write in clean Markdown with a strong introduction, detailed H2 sections, useful H3 subsections where appropriate, practical explanations, actionable educational guidance, and a conclusion. Use the supplied research, search intent, Ubersuggest data, competitor gaps, unique content angle, recommended outline, and AI recommendation. The article must contain at least 600 words of substantive article body content. If the initial draft is shorter than 600 words, expand the existing supported sections with additional useful explanation, context, practical guidance, and search-intent coverage until the article reaches at least 600 words. Do not add unsupported claims, repetition, or filler solely to increase word count. Do not return an outline, summary, synopsis, or abbreviated article. Do not invent patients, testimonials, case studies, success stories, statistics, studies, quotes, diagnoses, medical findings, treatments, products, professional credentials, organizations, URLs, or factual claims. Clearly label any illustrative example as hypothetical. Do not state or imply that Zelda's Hair Clinic, a trichologist, or salon professional medically diagnoses, medically treats, cures, prevents, or reverses a medical condition unless that specific statement is explicitly supported by the supplied approved information and authoritative research. Prefer educational language such as assesses hair and scalp concerns, provides education and guidance, helps clients better understand hair and scalp concerns, or may recommend evaluation by an appropriate licensed healthcare professional. Do not state that scalp care prevents hair loss, guarantees or promotes hair growth, improves hair density, reverses thinning, restores hair, or produces a medical or wellness outcome unless the specific claim is supported by an authoritative source in the supplied research package. The article is Draft 1 awaiting Zelda's review and must not imply that it has been approved or published."
+    },
+    "article_word_count": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Approximate word count of article_draft only. The reported word count must reflect the completed article body, which must contain at least 600 words."
+    },
+    "faq_section": {
+      "type": "string",
+      "description": "Three to five relevant questions and substantive answers informed by search intent, People Also Ask, related searches, and the article topic. Answers must follow the same factual and health-content safeguards as the article body. Do not invent factual or medical claims. Do not state that a trichologist diagnoses or medically treats a condition unless explicitly supported by the supplied approved information and authoritative research."
+    },
+    "internal_link_suggestions": {
+      "type": "string",
+      "description": "Relevant internal content or Zelda's Hair Clinic service-page opportunities. Provide page or article topics separated clearly. Use known services and appropriate content topics only. Do not invent live URLs or unsupported services."
+    },
+    "external_authority_links": {
+      "type": "string",
+      "description": "Use only authoritative organizations, resources, or URLs contained in the supplied research package. Do not add an organization, website, citation, or URL from general model knowledge merely because it appears relevant. Never fabricate URLs. For health, hair-loss, scalp, nutrition, or wellness topics, favor recognized medical organizations, government health agencies, universities, peer-reviewed resources, or established professional organizations when those resources are present in the supplied research. If the research package contains no appropriate authoritative resource, return an empty string."
+    },
+    "image_prompt": {
+      "type": "string",
+      "description": "One detailed article-specific premium editorial photography prompt for Zelda's Hair Clinic. The image should communicate the article topic using authentic people when relevant, realistic hair textures, professional hair or scalp consultation environments, natural expressions, inclusive representation, refined salon or clinic lighting, visual depth, and a premium hair-care or wellness aesthetic. The image must not visually imply diagnosis, guaranteed treatment outcomes, unrealistic hair growth, or unsupported medical procedures. Avoid generic stock imagery, graphic scalp conditions, exaggerated before-and-after imagery, unrealistic hair growth, unsupported medical procedures, cartoons, stereotypes, logos, watermarks, headlines, or text embedded in the image."
+    },
+    "image_alt_text": {
+      "type": "string",
+      "description": "Concise, accessible alt text accurately describing the proposed featured image. Do not keyword stuff or describe medical conclusions that cannot be determined visually."
+    },
+    "cta": {
+      "type": "string",
+      "description": "Relevant, credible call to action connecting the reader with Zelda's Hair Clinic or an appropriate supplied service. The CTA may encourage the reader to learn more, contact Zelda's Hair Clinic, or schedule an appropriate consultation when supported by the research and business information. Do not guarantee hair growth, hair restoration, diagnosis, treatment success, nutritional results, wellness outcomes, or other results."
+    },
+    "quality_review": {
+      "type": "string",
+      "description": "Brief editorial quality assessment covering search intent, article depth, minimum 600-word article requirement, SEO structure, readability, keyword use, brand alignment, factual caution, unsupported claims, health-content safeguards, source integrity, CTA relevance, image-brand alignment, and readiness for Zelda to review. Specifically identify any health, medical, nutrition, hair-growth, hair-loss, scalp, treatment, service, credential, product, or outcome statement Zelda should verify before publication. Confirm whether external authority resources came from the supplied research package. Do not mark the article as finally approved."
+    }
+  },
+  "required": [
+    "request_id",
+    "draft_version",
+    "content_type",
+    "topic_area",
+    "target_audience",
+    "business_goal",
+    "related_service",
+    "related_book",
+    "seo_title",
+    "meta_description",
+    "url_slug",
+    "primary_keyword",
+    "secondary_keywords",
+    "article_draft",
+    "article_word_count",
+    "faq_section",
+    "internal_link_suggestions",
+    "external_authority_links",
+    "image_prompt",
+    "image_alt_text",
+    "cta",
+    "quality_review"
+  ],
+  "additionalProperties": false
+}
