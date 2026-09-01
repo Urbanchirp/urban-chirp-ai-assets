@@ -4,6 +4,11 @@
   "description": "Structured publication-ready editorial, SEO, linking, image direction, CTA, and quality-control output for Zelda's Hair Clinic. This schema governs the final editorial package produced after research, Draft 1 generation, and editorial revision. Hair-loss, scalp, trichology, nutrition, wellness, restoration, and other health-related content must remain educational, cautious, evidence-aware, and grounded in the supplied research. The final package must not invent medical claims, diagnoses, treatments, procedures, services, credentials, statistics, studies, URLs, patients, testimonials, or outcomes.",
   "type": "object",
   "properties": {
+     "request_id": {
+      "type": "string",
+      "pattern": "^ZHC-[0-9]{8}-[0-9]{4}$",
+      "description": "Exact Request ID supplied by the workflow. Preserve it unchanged from the research and Draft 1 stages. Do not generate, recalculate, or replace it."
+    },     
     "article_title": {
       "type": "string",
       "description": "Publication-ready H1 article title. Use the primary keyword naturally when appropriate. Avoid clickbait, diagnosis language, cure language, guaranteed outcomes, unsupported treatment claims, and exaggerated promises."
