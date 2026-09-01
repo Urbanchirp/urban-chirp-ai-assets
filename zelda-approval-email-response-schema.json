@@ -5,10 +5,10 @@
   "type": "object",
   "properties": {
     "request_id": {
-      "type": "string",
-      "pattern": "^ZHC-[0-9]{8}-[0-9]{4}$",
-      "description": "The exact dynamic Zelda's Hair Clinic Request ID found in the email subject or quoted email body. Preserve it exactly as written. Expected format: ZHC-YYYYMMDD-HHMM."
-    },
+    "type": "string",
+    "pattern": "^(ZHC-[0-9]{8}-[0-9]{4})?$",
+    "description": "The exact dynamic Zelda's Hair Clinic Request ID found in the email subject or quoted email body. Preserve it exactly as written. Expected format: ZHC-YYYYMMDD-HHMM. Return an empty string if no valid Request ID can be found. Never invent or reconstruct a Request ID."
+    }
     "decision": {
       "type": "string",
       "enum": [
