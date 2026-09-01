@@ -81,6 +81,7 @@
     }
   },
   "required": [
+    "request_id",
     "article_title",
     "seo_title",
     "meta_description",
