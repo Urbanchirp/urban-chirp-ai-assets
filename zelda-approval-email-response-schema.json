@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Zelda's Hair Clinic - Approval Email Response",
+  "description": "Structured output for extracting Dr. Zelda Harding's article decision, Request ID, and review comments from an email reply.",
+  "type": "object",
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "pattern": "^ZHC-[0-9]{8}-[0-9]{4}$",
+      "description": "The exact dynamic Zelda's Hair Clinic Request ID found in the email subject or quoted email body. Preserve it exactly as written. Expected format: ZHC-YYYYMMDD-HHMM."
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "APPROVE",
+        "REQUEST REVISION",
+        "REJECT",
+        "UNCLEAR"
+      ],
+      "description": "Dr. Zelda Harding's normalized editorial decision. Use APPROVE only for clear approval. Use REQUEST REVISION for clear requested changes, REJECT for clear rejection, and UNCLEAR when the response does not confidently communicate one of the other decisions."
+    },
+    "comments": {
+      "type": "string",
+      "description": "Dr. Zelda Harding's revision or rejection comments. Preserve the substance of her requested changes without inventing or adding instructions. Return an empty string when there are no comments."
+    }
+  },
+  "required": [
+    "request_id",
+    "decision",
+    "comments"
+  ],
+  "additionalProperties": false
+}
